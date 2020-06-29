@@ -3,13 +3,13 @@
 using namespace std;
 
 
-string move_string(const std::pair<int, int>& m)
+string move_string(const pair<int, int>& m)
 {
     if (m.first < 0) return "PASS";
     return string(1, char('A' + m.first)) + to_string(m.second);
 }
 
-ostream& operator <<(ostream& os, const std::set<std::pair<int, int>>& ms)
+ostream& operator <<(ostream& os, const set<pair<int, int>>& ms)
 {
     for (auto m : ms) os << " " << move_string(m);
     return os;
